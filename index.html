@@ -66,6 +66,28 @@
         .gif-once {
             image-rendering: -webkit-optimize-contrast; /* Ensures better quality */
         }
+         /* Style for the loading screen */
+         #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff8ed;
+            z-index: 9999; /* Ensure it is on top of other elements */
+        }
+        #loading-screen img {
+            max-width: 400px;
+            max-height: 300px;
+        }
+
+        /* Hide the loading screen after page is loaded */
+        body.loaded #loading-screen {
+            display: none;
+        }
     </style>
 
     <link rel="stylesheet" type="text/css" href="styles/sweetalert.css">
@@ -74,6 +96,11 @@
 <body>
     <div id="main-page" text_alert_rsvp="Xin cảm ơn phản hồi của bạn!" alert_pls_name="Vui lòng nhập Tên!" send_text_alert_rsvp="Gửi lời nhắn hoặc lời chúc" btn_send_mb="Gửi đi">
     <div class="box-tsimple-online">
+
+        <div id="loading-screen">
+            <img src="./images/loading.gif" alt="Loading...">
+        </div>
+
         <div class="cover">
             <img src="./images/intro.gif">
         </div>
@@ -185,7 +212,6 @@
                             <div class="left">
                                 <div class="farme">
                                     <img class="pos1" src="./images/farm-sk.png">
-                                    <!-- <img class="pos2" src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/groom.jpg"> -->
                                     <img class="pos2" src="./images/chu_re_intro.JPG">
                                     <div class="pos3">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -2556,7 +2582,6 @@
                             <div class="left">
                                 <div class="farme">
                                     <img class="pos1" src="./images/farm-sk.png">
-                                    <!-- <img class="pos2" src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bride.jpg"> -->
                                     <img class="pos2" src="./images/co_dau_intro.jpg">
                                     <div class="pos3">
                                         <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -2946,15 +2971,11 @@
                     <div class="abt3">
                         <div class="slide-ab3">
                                 <div class="pos-relative pd-15">
-                                <!-- <div class="img-relative-jk">
-                                    <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bg-shtheme.png">
-                                </div> -->
 
                                 <div class="box-slide-abt3">
                                     <div class="bg">
                                         <div class="flex-dx">
                                             <div class="img text-center pos-relative">
-                                                <!-- <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bride.jpg"> -->
                                                 <img src="./images/memory_1.jpg">
 
                                                 <div class="tapet">
@@ -2992,16 +3013,12 @@
 
                                 </div>
                             </div>
-                                                         <div class="pos-relative pd-15">
-                                <!-- <div class="img-relative-jk">
-                                    <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bg-shtheme.png">
-                                </div> -->
+                                <div class="pos-relative pd-15">
 
                                 <div class="box-slide-abt3">
                                     <div class="bg">
                                         <div class="flex-dx">
                                             <div class="img text-center pos-relative">
-                                                <!-- <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bride.jpg"> -->
                                                 <img src="./images/memory_2.JPEG">
 
                                                 <div class="tapet">
@@ -3041,15 +3058,11 @@
                                 </div>
                             </div>
                                 <div class="pos-relative pd-15">
-                                <!-- <div class="img-relative-jk">
-                                    <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bg-shtheme.png">
-                                </div> -->
 
                                 <div class="box-slide-abt3">
                                     <div class="bg">
                                         <div class="flex-dx">
                                             <div class="img text-center pos-relative">
-                                                <!-- <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bride.jpg"> -->
                                                 <img src="./images/memory_cau_hon.JPEG">
 
                                                 <div class="tapet">
@@ -3083,21 +3096,17 @@
                                     
 
                                     <div class="mt-d-1">
-                                        <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bg-shtheme.png">
+                                        <img src="./images/bg-shtheme.png">
                                     </div>
 
                                 </div>
                             </div>
-                                                         <div class="pos-relative pd-15">
-                                <!-- <div class="img-relative-jk">
-                                    <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bg-shtheme.png">
-                                </div> -->
+                                <div class="pos-relative pd-15">
 
                                 <div class="box-slide-abt3">
                                     <div class="bg">
                                         <div class="flex-dx">
                                             <div class="img text-center pos-relative">
-                                                <!-- <img src="https://app.thesimple.vn/template-thiep/thiep-cuoi-1/images/bride.jpg"> -->
                                                 <img src="./images/memory_chung_doi.JPEG">
 
                                                 <div class="tapet">
@@ -3136,7 +3145,7 @@
 
                                 </div>
                             </div>
-                                                     </div>
+                            </div>
                     </div>
                 </div>
 
@@ -3158,16 +3167,16 @@
 
                 <div class="autoplay">
                     <div>
-                          <img src="https://app.thesimple.vn/uploads/contact/customer/31718006137.png" alt="">
+                          <img src="/31718006137.png" alt="">
                     </div>
                     <div>
-                          <img src="https://app.thesimple.vn/uploads/contact/customer/21718006137.png" alt="">
+                          <img src="r/21718006137.png" alt="">
                     </div>
                     <div>
-                          <img src="https://app.thesimple.vn/uploads/contact/customer/11718006137.png" alt="">
+                          <img src="/11718006137.png" alt="">
                     </div>
                     <div>
-                          <img src="https://app.thesimple.vn/uploads/contact/customer/01718006137.png" alt="">
+                          <img src="/01718006137.png" alt="">
                     </div>
                                       
                 </div>
@@ -3218,7 +3227,7 @@
                 <div class="addevent" data-event='{
                     "title":"Lễ cưới của Chú rể Danh Lâm và Cô dâu Lan Anh",
                     "desc":"Thiệp cưới Online của Chú rể Danh Lâm và Cô dâu Lan Anh.", 
-                    "start":"2024-09-21 16:00",
+                    "start":"2024-09-21 08:00",
                     "end":"2024-09-22 11:30",
                     "location":"",
                     "timezone":"Asia/Ho_Chi_Minh" 
@@ -3487,12 +3496,6 @@
             <div class="mt-20 momo">
                 <a href="0936733002" target="_blank"><img src="https://ucarecdn.com/1765b833-efa8-4c30-9171-6978ac6cedb6/-/format/auto/-/preview/3000x3000/-/quality/lighter/momo2.png"></a>
             </div> -->
-            
-
-                       <!--  <hr class="dotted">
-            <div class="text-center qrpay-img">
-                <img src="https://app.thesimple.vn/">
-            </div> -->
                         
         </div>
         
@@ -3509,16 +3512,11 @@
             </div>
         
 
-        
+
         
                 <div class="mt-80">
             <h3 class="text-center">Thông tin liên hệ</h3>
         </div>
-        <!-- <div class="mt-40">
-                        <div>
-                <img src="https://app.thesimple.vn/uploads/contact/6666b20f4d449-footer (4).jpg" alt="">
-            </div> -->
-
 
             <div class="col-xs-6">
                 <a href="tel:0936733002"><img src="./images/footer_1.jpg" alt=""></a>
@@ -3561,7 +3559,7 @@
     </div>
 
     
-    <audio id="audio"  src="./audio/septemper.mp3" autoplay>
+    <audio id="audio"  src="./audio/EmDongY.mp3" autoplay>
     </audio>
 
     <div class="module gf_module- gf_module--lg gf_module--md gf_module--sm gf_module--xs ">
@@ -3590,11 +3588,6 @@
     
     <div class="rsvp-data" data-link=""></div>
     <div class="countdown-time" data-time="September 22, 2024 11:30" data-id="1131"></div>
-    <!-- /app/public/thiep-cuoi-1/css -->
-<!-- /app/public/thiep-cuoi-1/js -->
-<!-- /app/public/thiep-cuoi-1/image -->
-
-    
 
 </div>
 <script src="scripts/jquery.js"></script>
@@ -3786,3 +3779,10 @@
         }
     });
   </script>
+
+<script>
+    // Hide the loading screen when the page is fully loaded
+    window.addEventListener('load', function() {
+        document.body.classList.add('loaded');
+    });
+</script>
